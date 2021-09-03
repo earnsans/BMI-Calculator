@@ -6,14 +6,14 @@ def bmicalculator():
     weight=input("Enter your weight in Kg",type=FLOAT)
     
     bmi=weight/(height/100)**2
-    bmi_output={ 'Severely underweight' : 16, 'Underweight' : 18.5,
-                  'Normal' : 25, 'Overweight' : 30,
-                  'Moderately obese' : 35, 'Severely obese' : float('inf')}
+    bmi_output={ 'Severely underweight : Try some ghee ?' : 16, 'Underweight' : 18.5,
+                  'Normal : Woah! Fit as a fiddle!' : 25.0, 'Overweight : time to skip the Sugars yet ?' : 30.0,
+                  'Obese : do some weights !?' : 35.0, 'Severely Obese : how about weights and salads ?' : float('inf')}
     
     for out, val in bmi_output.items() :
          if(bmi<= val):
                 
-                put_text('Your BMI is :%.1f and the person is :%s'%(bmi,out))
+                put_text('Your BMI is %.1f and you are %s'%(bmi,out))
                 break
 if __name__=='__main__':
     bmicalculator()            
